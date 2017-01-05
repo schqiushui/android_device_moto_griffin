@@ -4,11 +4,10 @@
 
 # mount point   fstype     device                       device2                  flags
 /system         ext4       /dev/block/bootdevice/by-name/system
-#/system_image   emmc       /dev/block/bootdevice/by-name/system
+/system_image   emmc       /dev/block/bootdevice/by-name/system                  flags=flashimg=1
 /data           f2fs       /dev/block/bootdevice/by-name/userdata                flags=encryptable=/dev/block/bootdevice/by-name/metadata
-/cache          auto       /dev/block/bootdevice/by-name/cache
-/recovery       emmc       /dev/block/bootdevice/by-name/recovery
-/recovery_bak   emmc       /dev/block/bootdevice/by-name/recovery                 flags=display="Recovery";backup=1
+/cache          ext4       /dev/block/bootdevice/by-name/cache
+/recovery       emmc       /dev/block/bootdevice/by-name/recovery                flags=display="Recovery";backup=1
 /boot           emmc       /dev/block/bootdevice/by-name/boot
 /misc           emmc       /dev/block/bootdevice/by-name/misc
 /firmware       ext4       /dev/block/bootdevice/by-name/modem                   flags=fsflags="ro,nosuid,nodev";display="Firmware"

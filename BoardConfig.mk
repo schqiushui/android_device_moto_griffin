@@ -88,12 +88,12 @@ TW_BRIGHTNESS_PATH := "/sys/devices/soc/900000.qcom\x2cmdss_mdp/900000.qcom\x2cm
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 149
 TW_INCLUDE_NTFS_3G := true
-TW_NO_USB_STORAGE := true
+#TW_NO_USB_STORAGE := true    # (Enable USB Storage cause of useful sometimes.)
 #TW_USE_TOOLBOX    := true
 TW_USE_BUSYBOX := true
 
 # exFAT drivers included in the kernel
-TW_NO_EXFAT_FUSE := true
+#TW_NO_EXFAT_FUSE := true    # (Enable EXFAT_FUSE to make External SDCard available by MTP. So, Do not set it true)
 
 # Asian region languages
 TW_EXTRA_LANGUAGES := true
